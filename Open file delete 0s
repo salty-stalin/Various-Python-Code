@@ -1,0 +1,5 @@
+with open("ketek_fe_0khz.txt", "r") as input:
+    with open("new_fe0khz.txt", "w") as output: 
+        for line in input:
+            if line.strip("\n") != "0":
+                output.write(line)
