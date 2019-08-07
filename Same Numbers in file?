@@ -1,0 +1,11 @@
+f1=open("output.txt","r")
+f2=open("output1.txt","r")
+for line1 in f1:
+    for line2 in f2:
+        if line1==line2:
+            print("SAME\n")
+        else:
+            print(line1 + line2)
+        break
+f1.close()
+f2.close()
