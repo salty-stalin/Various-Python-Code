@@ -1,0 +1,5 @@
+with open("testdata.txt", "r") as input:
+    with open("testdata output.txt", "w") as output: 
+        for line in input:
+            if line.strip("\n") >= "0" :
+                output.write(line)
