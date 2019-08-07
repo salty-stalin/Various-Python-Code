@@ -1,0 +1,17 @@
+import numpy as np
+
+f=open("fe_25khz_without0s_100000.txt","r")
+f1=f.readlines()
+values=[]
+for x in f1:
+	
+	inter=float(x)
+	values.append(inter)
+max_val=max(values)
+print(max_val)
+bins=np.arange(0,max_val,1)
+
+
+data=zip(*np.histogram(values,bins))
+print(data)
+np.savetxt('test.txt', data,fmt='%1.3f', delimiter = " " ,newline = "\n")
